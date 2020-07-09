@@ -1,0 +1,17 @@
+<header class="img-header">
+  <div class="title">
+    <span class="title-subtext">Арты</span>
+    <span class="title-text">Слави</span>
+  </div>
+</header>
+<div class="introduction">
+  <h2>Галерея Славяны - лучшей девочки лета</h2>
+</div>
+<div class="row">
+  <a class="i" *ngFor="let image of filteredImages" [href]="'../assets/images/' + image">
+    <img class="img-gal" [src]="'../assets/images/' + image" alt="">
+  </a>
+</div>
+<mat-paginator [length]="images?.length" showFirstLastButtons [pageSize]="size" [pageIndex]="page"
+  [pageSizeOptions]="[25, 50, 100, 200, 500, images?.length]" (page)="getData($event)">
+</mat-paginator>
