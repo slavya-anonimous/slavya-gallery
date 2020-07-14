@@ -49,15 +49,35 @@ h2 {
     border-bottom: 3px solid #000;
 }
 
-.img-gal {
-    max-height: 350px;
-    margin: 8px;
-    border-radius: 5px;
-    max-width: calc(100vw - 16px);
-    border: 3px solid #000;
-    box-shadow: 0px 0px 10px 5px #fff;
-    background-color: white;
+::ng-deep {
+  .plain-container {
+    justify-content: center !important;
+    flex-wrap: wrap;
+
+    .image {
+      cursor: url(../assets/cursor/cursor.png), default !important;
+      max-height: 350px;
+      height: initial !important;
+      margin: 8px !important;
+      border-radius: 5px;
+      max-width: calc(100vw - 16px);
+      width: initial !important;
+      border: 3px solid #000;
+      box-shadow: 0px 0px 10px 5px #fff;
+      background-color: white;
+    }
   }
+}
+
+::ng-deep {
+  .close-image.inside,
+  .download-image.inside,
+  .inside.left-arrow-image,
+  .inside.right-arrow-image,
+  .inside.rotate0 {
+    cursor: url('../assets/cursor/cursor.png'), default !important;
+  }
+}
 
 .row { 
   display: flex;
