@@ -13,6 +13,6 @@ body {
             user-select: none;
 }
 
-a {
-    cursor: url('assets/cursor/cursor.png'), default;
+a, label {
+    cursor: url('assets/cursor/cursor.png'), default !important;
 }
