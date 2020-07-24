@@ -77,9 +77,7 @@ export class AppComponent implements OnInit {
     console.log(obj.pageIndex);
     if (this.currentPage < obj.pageIndex) {
       document.body.scrollTop = document.documentElement.scrollTop = 1140;
-    } else {
-      setTimeout(() => window.scrollTo(0,document.body.scrollHeight), 500); 
-    }
+    } 
 
     this.currentPage = obj.pageIndex;
   }
